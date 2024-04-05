@@ -1,0 +1,61 @@
+<resources>
+
+    <string-array name="foodtime">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <!-- Add more parent items as needed -->
+    </string-array>
+    <string-array name="foodtype">
+        <item>Pizza</item>
+        <item>Burger</item>
+        <!-- Add more parent items as needed -->
+    </string-array>
+
+    <string-array name="subitempizza">
+        <item>Roti</item>
+        <item>Cheese</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+        <item>Roti</item>
+
+
+        <!-- Add more sub items for Parent Item 1 as needed -->
+    </string-array>
+
+    <string-array name="subitemburger">
+        <item>Patty</item>
+        <item>tomato</item>
+        <!-- Add more sub items for Parent Item 2 as needed -->
+    </string-array>
+    <string name="app_name">RecipeApp</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="foodname">Recipe Name</string>
+    <string name="typefood">Type of Food</string>
+    <string name="timefood">Meal Time</string>
+    <string name="ingredient">Ingredients</string>
+    <string name="continu">Continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="type_of_recipe">Type of Recipe</string>
+    <string name="how_to_prepare">How to Prepare</string>
+    <string name="picture_recipe">Picture recipe</string>
+    <string name="save">Save</string>
+</resources>

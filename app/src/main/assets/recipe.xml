@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <recipes>
+        <recipe>
+            <name>Pasta</name>
+            <step>step pasta</step>
+            <ingredients>
+                <ingredient>Spaghetti</ingredient>
+                <ingredient>Tomato Sauce</ingredient>
+                <ingredient>Cheese</ingredient>
+            </ingredients>
+        </recipe>
+        <recipe>
+            <name>Pizza</name>
+            <step>step piza</step>
+
+            <ingredients>
+                <ingredient>Dough</ingredient>
+                <ingredient>Tomato Sauce</ingredient>
+                <ingredient>Cheese</ingredient>
+                <ingredient>Toppings</ingredient>
+            </ingredients>
+
+
+        </recipe>
+        <!-- Add more recipes as needed -->
+    </recipes>
+</resources>
