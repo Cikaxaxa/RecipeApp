@@ -73,8 +73,7 @@ class ListRecipe : AppCompatActivity() {
         val recipe = dbHelper.getRecipeByName(recipeName )
         editTextIngredients.text = recipe.ingredients
         editTextDetails.text = recipe.steps
-        // Load image into ImageView using Picasso or any other image loading library
-//        Picasso.get().load(recipe.imageUri).into(imageViewRecipe)
+
         if (recipe.imageUri != null) {
             val imageUri = Uri.parse(recipe.imageUri)
             imageViewRecipe.setImageURI(imageUri)

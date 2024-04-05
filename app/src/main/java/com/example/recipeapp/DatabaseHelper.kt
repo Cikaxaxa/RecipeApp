@@ -150,10 +150,10 @@ class DatabaseHelper(context: Context) :
         contentValues.put(COLUMN_RECIPE_IMAGE, imageUri)
 
 
-        // Insert or replace the row if COL_NAME already exists
+
         db.insertWithOnConflict(TABLE_RECIPE, null, contentValues, SQLiteDatabase.CONFLICT_REPLACE)
 
-        // Delete other rows with the same COL_NAME
+
         db.delete(TABLE_RECIPE, "$COLUMN_RECIPE_NAME <> ? AND $COLUMN_RECIPE_NAME = ?", arrayOf(name, name))
     }
 

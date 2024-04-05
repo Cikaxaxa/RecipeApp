@@ -26,22 +26,15 @@ class SearchRecipe : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_recipe)
 
-        // Load data array from resources
-//        subPizzaArray = resources.getStringArray(R.array.subpiza)
-//        subarry = resources.getStringArray(R.array.sub_array)
-//        subBurgerArray = resources.getStringArray(R.array.subburger)
-//        subCakeArray = resources.getStringArray(R.array.subcake)
-//        stepPizzaArray = resources.getStringArray(R.array.stepiza)
-//        stepBurgerArray = resources.getStringArray(R.array.stepburger)
 
-        // Initialize views
+
         editTextRecipeType = findViewById(R.id.editTextRecipeType)
         buttonSearch = findViewById(R.id.buttonSearch)
         textViewResult = findViewById(R.id.spinnertyperecipe)
         textViewResult2 = findViewById(R.id.txtingredient2)
         textViewResult3 = findViewById(R.id.textstep2)
 
-        // Search button click listener
+
         buttonSearch.setOnClickListener {
             filterAndDisplaySubArray()
         }
@@ -50,21 +43,18 @@ class SearchRecipe : AppCompatActivity() {
     private fun filterAndDisplaySubArray() {
         val userInput = editTextRecipeType.text.toString().trim()
 
-        // Determine sub-array based on user input
+
         val subArray = when (userInput) {
             "Pizza" -> {
                 val toppings = mutableListOf<String>()
                 toppings.addAll(listOf("Pizza"))
                 toppings.addAll(listOf("\nHere is The Ingredients:"))
-//                toppings.addAll(resources.getStringArray(R.array.subpiza))
-//                toppings.addAll(listOf("\nHow to Prepare:"))
-//                toppings.addAll(resources.getStringArray(R.array.stepiza))
+//
                 toppings.toTypedArray()
             }
             "Burger" -> {
                 val toppings = mutableListOf<String>()
-//                toppings.addAll(resources.getStringArray(R.array.subburger))
-//                toppings.addAll(resources.getStringArray(R.array.stepburger))
+//
                 toppings.toTypedArray()
             }
             else -> emptyArray()
