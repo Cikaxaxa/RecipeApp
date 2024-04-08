@@ -58,9 +58,9 @@ class DatabaseHelper(context: Context) :
         db.execSQL(createRecipeTableQuery)
 
 
-        addSampleRecipe(db, "Pasta", "Pasta, Tomato Sauce, Cheese", "1. Boil the pasta. 2. Add sauce. 3. Add cheese.","android.resource://com.example.recipeapp/2131230957")
-        addSampleRecipe(db, "Pizza", "Dough, Tomato Sauce, Cheese, Toppings", "1. Roll out the dough. 2. Add sauce and toppings. 3. Bake.","android.resource://com.example.recipeapp/2131230957")
-        addSampleRecipe(db, "Salad", "Lettuce, Tomatoes, Cucumbers, Dressing", "1. Chop vegetables. 2. Toss with dressing.","android.resource://com.example.recipeapp/2131230957")
+        addSampleRecipe(db, "Pasta", "Pasta, Tomato Sauce, Cheese", "1. Boil the pasta. 2. Add sauce. 3. Add cheese.","android.resource://com.example.recipeapp/drawable/pasta")
+        addSampleRecipe(db, "Pizza", "Dough, Tomato Sauce, Cheese, Toppings", "1. Roll out the dough. 2. Add sauce and toppings. 3. Bake.","android.resource://com.example.recipeapp/drawable/piz")
+        addSampleRecipe(db, "Salad", "Lettuce, Tomatoes, Cucumbers, Dressing", "1. Chop vegetables. 2. Toss with dressing.","android.resource://com.example.recipeapp/drawable/salad")
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
