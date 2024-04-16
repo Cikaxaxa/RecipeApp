@@ -5,27 +5,33 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="View Recipe" />
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+        android:text="@string/view_recipe" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/ButtonUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonView"
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
         android:layout_marginTop="16dp"
-        android:text="Update Or Delete Recipe" />
+        android:text="@string/update_or_delete_recipe" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/ButtonAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ButtonUpdate"
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
         android:layout_marginTop="16dp"
-        android:text="Add Recipe" />
+        android:text="@string/add_recipe" />
 
 </RelativeLayout>

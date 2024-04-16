@@ -5,35 +5,56 @@
     android:padding="16dp"
     tools:context=".LogIn">
 
-    <EditText
-        android:id="@+id/usernameEditText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/l1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:layout_marginBottom="16dp">
 
-    <EditText
-        android:id="@+id/passwordEditText"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/l2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/usernameEditText"
-        android:layout_marginTop="16dp"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_below="@id/l1"
+        android:layout_marginBottom="16dp">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/passwordEditText"
+        android:layout_below="@id/l2"
         android:layout_marginTop="16dp"
-        android:text="Login" />
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+        android:text="@string/login" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/loginButton"
         android:layout_marginTop="16dp"
-        android:text="Sign Up" />
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+        android:text="@string/sign_up" />
 
 </RelativeLayout>

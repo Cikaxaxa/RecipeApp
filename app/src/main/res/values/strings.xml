@@ -58,4 +58,21 @@
     <string name="how_to_prepare">How to Prepare</string>
     <string name="picture_recipe">Picture recipe</string>
     <string name="save">Save</string>
+    <string name="home">Home</string>
+    <string name="delete_recipe">Delete Recipe</string>
+    <string name="update_recipe">Update Recipe</string>
+    <string name="step_to_make">Step To Make :</string>
+    <string name="ingredients">Ingredients :</string>
+    <string name="recipe_name">Recipe Name :</string>
+    <string name="click_icon_to_change_picture">Click Icon to Change Picture</string>
+    <string name="recipe_type">Recipe Type :</string>
+    <string name="register">Register</string>
+    <string name="click_icon_to_insert_picture">Click Icon to Insert Picture</string>
+    <string name="steps_to_make">Steps to Make :</string>
+    <string name="steps">Steps</string>
+    <string name="save_recipe">Save Recipe</string>
+    <string name="login">Login</string>
+    <string name="view_recipe">View Recipe</string>
+    <string name="update_or_delete_recipe">Update Or Delete Recipe</string>
+    <string name="add_recipe">Add Recipe</string>
 </resources>

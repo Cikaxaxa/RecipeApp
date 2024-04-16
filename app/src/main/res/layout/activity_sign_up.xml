@@ -5,27 +5,49 @@
     android:padding="16dp"
     tools:context=".SignUp">
 
-    <EditText
-        android:id="@+id/usernameEditText"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:layout_marginTop="25dp"
+        android:text="Username : ">
 
-    <EditText
-        android:id="@+id/passwordEditText"
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            tools:ignore="TouchTargetSizeCheck" />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/usernameEditText"
-        android:layout_marginTop="16dp"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/txt1"
+        android:text="@string/password">
 
-    <Button
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usernameEditText"
+            android:layout_marginTop="16dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            tools:ignore="TouchTargetSizeCheck" />
+</com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/passwordEditText"
+        android:layout_below="@id/txt2"
         android:layout_marginTop="16dp"
-        android:text="Register" />
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+        android:text="@string/register" />
 
 </RelativeLayout>

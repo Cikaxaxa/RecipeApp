@@ -1,59 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".ListRecipe">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtingre3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Recipe Name :"/>
+        android:hint="@string/recipe_type"/>
 
-    <Spinner
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/recipeType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtingre3"
+        android:minHeight="48dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeType"
+        android:layout_marginTop="16dp"
+        android:hint="@string/recipe_name"/>
+
+    <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/recipeSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txtingre3"/>
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/txtname"/>
 
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageViewRecipe"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:src="@drawable/baseline_image_24"/>
+        android:src="@drawable/baseline_image_24"
+        android:layout_below="@id/recipeSpinner"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtingre2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewRecipe"
         android:layout_marginTop="16dp"
-        android:hint="Ingredients :"/>
+        android:hint="@string/ingredients"/>
 
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/editTextIngredients"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtingre2"
         android:layout_marginTop="16dp"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txtingre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextIngredients"
         android:layout_marginTop="16dp"
-        android:hint="Step To Make:"/>
+        android:hint="@string/step_to_make"/>
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/editTextDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,15 +81,19 @@
         android:layout_marginTop="16dp"/>
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextDetails"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Home"/>
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+        android:text="@string/home"/>
+
+    </RelativeLayout>
 
 
 
-</RelativeLayout>
+</ScrollView>

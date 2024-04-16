@@ -8,6 +8,7 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".UpdateRecipe"
             android:exported="false" />
@@ -27,16 +30,10 @@
             android:name=".SignUp"
             android:exported="false" />
         <activity
-            android:name=".SearchRecipe"
-            android:exported="false" />
-        <activity
             android:name=".AddRecipe"
             android:exported="false" />
         <activity
             android:name=".ListRecipe"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".LogIn"

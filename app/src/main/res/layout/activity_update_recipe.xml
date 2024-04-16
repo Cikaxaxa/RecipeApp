@@ -1,76 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
     tools:context=".UpdateRecipe">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-    <Spinner
-        android:id="@+id/recipeSpinner"
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txttext"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/recipe_type"/>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/recipeType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txttext"
+            android:minHeight="48dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtspinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recipeType"
+        android:layout_marginTop="5dp"
+        android:hint="@string/recipe_name"/>
+
+        <Spinner
+            android:id="@+id/recipeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtspinner"
+            android:minHeight="48dp" />
 
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageViewRecipe"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:visibility="visible"
+        android:layout_below="@id/recipeSpinner"
         android:src="@drawable/baseline_image_24"/>
 
-    <TextView
-        android:id="@+id/txt"
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewRecipe"
+            android:text="@string/click_icon_to_change_picture"
+            android:textStyle="italic"
+            android:gravity="center"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_below="@id/imageViewRecipe"
-        android:hint="Ingredients :"/>
+        android:layout_below="@id/txt4"
+        android:hint="@string/recipe_name">
 
-    <EditText
-        android:id="@+id/editTextIngredients"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edittextname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/txt"
-        android:layout_marginTop="5dp"
-        android:hint="Ingredients"/>
+        android:layout_below="@id/txt3"
+        android:minHeight="48dp"
+        android:layout_marginTop="5dp"/>
 
-    <TextView
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_below="@id/txt3"
+            android:hint="@string/ingredients">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt"
+            android:minHeight="48dp"
+            android:layout_marginTop="5dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:layout_below="@id/editTextIngredients"
-        android:hint="Step To Make :"/>
+        android:layout_below="@id/txt"
+        android:hint="@string/step_to_make">
 
-    <EditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txt2"
-        android:layout_marginTop="5dp"
-        android:hint="Step"/>
+        android:minHeight="48dp"
+        android:layout_marginTop="5dp"/>
 
-    <Button
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextDetails"
+        android:layout_below="@id/txt2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Update Recipe"/>
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+        android:text="@string/update_recipe"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonDelete"
+        android:textColor="@color/black"
+        android:theme="@style/Theme.MaterialComponents.Light.Bridge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonUpdate"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:text="Delete Recipe"/>
+        android:text="@string/delete_recipe"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonHome"
+            android:textColor="@color/black"
+            android:theme="@style/Theme.MaterialComponents.Light.Bridge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonDelete"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="@string/home"/>
+
+    </RelativeLayout>
 
 
 
-</RelativeLayout>
+</ScrollView>
