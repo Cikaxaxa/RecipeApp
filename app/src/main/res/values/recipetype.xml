@@ -1,0 +1,13 @@
+<resources>
+    <array name="my_array">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Appetizer </item>
+        <item>Salad </item>
+        <item>Main-course</item>
+        <item>Side-dish</item>
+
+
+    </array>
+</resources>
